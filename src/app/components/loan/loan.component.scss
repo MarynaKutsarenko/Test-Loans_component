@@ -1,0 +1,26 @@
+.container {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid #000;
+   margin-bottom: 15px;
+   background: #fff;
+}
+
+.list:not(:first-child){
+   margin-top: 10px;
+}
+
+.list-item {
+   margin-bottom: 10px;
+}
+
+.btn {
+   text-transform: uppercase;
+   padding: 10px 5px;
+   background: yellow;
+   border: 1px solid gray;
+   outline: none;
+   width: 100px;
+   align-self: end;
+}

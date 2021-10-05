@@ -25,7 +25,7 @@ export const loans = [
       "tranche": "C",
       "available": 12.359,
       "annualised_return": 4.80,
-      "term_remaining": "879000",
+      "term_remaining": 879000,
       "ltv": 48.80,
       "amount": 85.754
     }

@@ -1,3 +1,15 @@
-<p>loan-list works!</p>
-<app-loan></app-loan>
-<app-modal></app-modal>
+<div class="main">
+   <h1 class="title"> {{ title }} </h1>
+
+   <app-loan
+      *ngFor="let loan of loans"
+      [loan]="loan"
+   >
+   </app-loan>
+
+   <footer class="app-footer"> Total amount available for investmens: 
+      <span class="text">£{{ amount }}</span>
+   </footer>
+</div>
+
+<!-- <app-modal></app-modal> -->
