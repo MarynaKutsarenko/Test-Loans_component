@@ -1,1 +1,23 @@
-<p>modal works!</p>
+<div class="container">
+  <h3 class="title">{{ loan.title }}</h3>
+
+  <ul class="list">
+    <li class="list-item">Amount available: £{{ loan.available }}</li>
+    <li class="list-item">Loan ends in: 1 montth 10 days</li>
+
+    <li class="list-item">Investment amount(£{{ enteredValue }})</li>
+  </ul>
+
+  <input class="modal-input" 
+      type="text"
+      [placeholder]="inputPlaceholder" 
+      [(ngModel)]="enteredValue " 
+      (input)="handleValue($event)"
+  />
+
+  <button class="btn"
+    (click)="close($event)"
+  >
+    Invest
+  </button>
+</div>

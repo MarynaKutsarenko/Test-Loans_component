@@ -5,22 +5,23 @@
    border: 1px solid #000;
    margin-bottom: 15px;
    background: #fff;
+   max-width: 800px;
+   justify-content: center;
 }
 
-.list:not(:first-child){
-   margin-top: 10px;
-}
-
-.list-item {
+.title {
    margin-bottom: 10px;
 }
 
-.btn {
-   text-transform: uppercase;
-   padding: 10px 5px;
-   background: yellow;
-   border: 1px solid gray;
-   outline: none;
-   width: 100px;
-   align-self: end;
+.list{
+   max-width: 400px;
 }
+
+.list-item{
+   display: inline-block;
+}
+
+.list-item:not(:last-child) {
+   margin-bottom: 10px;
+}
+

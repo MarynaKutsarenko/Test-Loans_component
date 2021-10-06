@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Loan } from '../../interface/loan';
-
 
 @Component({
   selector: 'app-loan',
@@ -8,7 +7,6 @@ import { Loan } from '../../interface/loan';
   styleUrls: ['./loan.component.scss']
 })
 export class LoanComponent implements OnInit {
-
   @Input() loan: Loan = {} as Loan;
 
   constructor() { }

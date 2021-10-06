@@ -1,0 +1,44 @@
+.container {
+   max-width: 400px;
+   padding: 15px;
+   height: 200px;
+   border: 1px solid grey;
+}
+
+.title {
+   margin-bottom: 20px;
+}
+
+.list {
+   margin-bottom: 10px;
+}
+
+.list-item{
+   margin-bottom: 10px;
+}
+
+.list-item:nth-child(2){
+   margin-bottom: 20px;
+}
+input {
+  font-size: 14px;
+  padding: 10px;
+  color: #374855;
+  outline: none;
+  background-color: #cedbda;
+  width: 150px;
+  border: none;
+  word-break: break-word;
+  margin-right: 10px;
+  text-align: right;
+}
+
+input::placeholder {
+  opacity: 0.5;
+  font-style: italic;
+  color: #374855;
+}
+
+input:focus {
+  border: 1px solid grey;
+}
