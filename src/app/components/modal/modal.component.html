@@ -1,5 +1,12 @@
 <div class="container">
-  <h3 class="title">{{ loan.title }}</h3>
+  <h3 class="title">Invest in Loan</h3>
+  <h5 class="title">{{ loan.title }}</h5>
+
+  <button class="close-modal"
+    (click)="handleCloseModal($event)"
+  >
+  X
+  </button>
 
   <ul class="list">
     <li class="list-item">Amount available: £{{ loan.available }}</li>
@@ -16,7 +23,7 @@
   />
 
   <button class="btn"
-    (click)="close($event)"
+    
   >
     Invest
   </button>

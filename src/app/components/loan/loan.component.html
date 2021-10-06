@@ -1,4 +1,6 @@
-<div class="container">
+<div class="container" 
+   (click)="handleSelectedLoan()"
+>
    <h3 class="title">{{ loan.title }}</h3>
 
    <ul class="list">
@@ -7,5 +9,9 @@
       <li class="list-item">amount: {{ loan.amount }}</li>
    </ul>
 
-   <button class="btn">Invest</button>
+   <button class="btn"
+   
+   >
+   Invest
+   </button>
 </div>

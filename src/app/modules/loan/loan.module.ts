@@ -7,7 +7,6 @@ import { LoanListComponent } from 'src/app/components/loan-list/loan-list.compon
 import { LoanComponent } from 'src/app/components/loan/loan.component';
 import { ModalComponent } from 'src/app/components/modal/modal.component';
 import { FormsModule } from '@angular/forms';
-import { PopupModule } from 'ng2-opd-popup/components/popup/popup.module';
 
 
 
@@ -21,8 +20,7 @@ import { PopupModule } from 'ng2-opd-popup/components/popup/popup.module';
   imports: [
    BrowserModule,
     CommonModule,
-    FormsModule,
-    PopupModule.forRoot(),
+    FormsModule
   ]
 })
 export class LoanModule { }

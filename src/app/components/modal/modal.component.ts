@@ -12,20 +12,19 @@ export class ModalComponent implements OnInit {
   public inputValue: string = '';
   public inputPlaceholder: string = 'enter invests...';
 
+  public isModalVisible: boolean = false;
+
   @Input() loan: Loan = {} as Loan;
-  @Output() isConfirmed: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() showModal: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
   public handleValue(e: Event): void {
     this.inputValue = (e.target as HTMLInputElement).value;
   }
-
-  public confirm(e: Event): void {
-    this.isConfirmed.emit(true);
-  }
   
-  public close(e: Event): void {
-    this.isConfirmed.emit(false);
+  public handleCloseModal(e: Event): void {
+    this.isModalVisible = false;
+    this.showModal.emit(true);
   }
 
   ngOnInit(): void {

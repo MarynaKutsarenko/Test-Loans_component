@@ -4,16 +4,20 @@
    <app-loan
       *ngFor="let loan of loans"
       [loan]="loan"
-      (click)="showModal($event)"
+      (click)="handleSelectedLoan(loan)"
    >
    </app-loan>
 
-   <footer class="footer"> Total amount available for investmens: 
+   <footer class="footer"> 
+      Total amount available for investmens: 
       <span class="footer-text">£{{ amount }}</span>
    </footer>
-</div>
 
-<app-modal 
-   *ngIf="isModalDialogVisible" 
->
-</app-modal>
+   <app-modal 
+   *ngIf="isModalVisible"
+   [loan]="loan"
+   (showModal)="handleOpenModal($event)" 
+   >
+   </app-modal>
+
+</div>

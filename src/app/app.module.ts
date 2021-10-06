@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { PopupModule } from 'ng2-opd-popup/components/popup/popup.module';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,7 +15,7 @@ import { LoanModule } from './modules/loan/loan.module';
     BrowserModule,
     AppRoutingModule,
     LoanModule,
-    PopupModule.forRoot()
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

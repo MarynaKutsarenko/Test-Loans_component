@@ -10,14 +10,21 @@ import { loans } from '../../db/current-loans';
 export class LoanListComponent implements OnInit {
   public title: string = 'Current Loans';
   public amount: number = 238.456;
+
   public loans: Loan[] = loans;
-  public isModalDialogVisible: boolean = false;
+  public loan: Loan = {} as Loan;
+
+  public isModalVisible: boolean = false;
 
   constructor() { }
 
-  public showModal(e: Event) {
-    this.isModalDialogVisible = !this.isModalDialogVisible;
+  public handleSelectedLoan(loan: Loan): void {
+    this.loan = loan;
+    this.isModalVisible = true;
+  }
 
+  public handleOpenModal(e: boolean): void {
+    this.isModalVisible = false;
   }
 
   ngOnInit(): void {
