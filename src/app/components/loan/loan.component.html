@@ -1,17 +1,29 @@
-<div class="container" 
-   (click)="handleSelectedLoan()"
->
-   <h3 class="title">{{ loan.title }}</h3>
+<div class="container" >
+
+   <h3 class="title">{{ loan.title }}
+      <span class="label {{ (loan.isInvested) ? 'show' : 'hide' }}">
+         Invested
+      </span>
+   </h3>
+   
 
    <ul class="list">
-      <li class="list-item">tranche: {{ loan.tranche }} , </li>
-      <li class="list-item"> available: {{ loan.available }}, </li>
-      <li class="list-item">amount: {{ loan.amount }}</li>
+      <li class="list-item">
+         tranche: {{ loan.tranche }} , 
+      </li>
+      <li class="list-item"> 
+         available: {{ loan.available }} , 
+      </li>
+      <li class="list-item">
+         amount: {{ loan.amount }}
+      </li>
    </ul>
 
-   <button class="btn"
-   
+   <button 
+      class="btn"
+      (click)="handleSelectedLoan()"
    >
-   Invest
+      Invest
    </button>
+   
 </div>

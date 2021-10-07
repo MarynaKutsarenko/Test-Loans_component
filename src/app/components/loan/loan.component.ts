@@ -7,8 +7,9 @@ import { Loan } from '../../interface/loan';
   styleUrls: ['./loan.component.scss']
 })
 export class LoanComponent implements OnInit {
-
+  
   @Input() loan: Loan = {} as Loan;
+
   @Output() selectedLoan: EventEmitter<Loan> = new EventEmitter<Loan>();
 
   constructor() { }

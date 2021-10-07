@@ -12,6 +12,18 @@
 .title {
    margin-bottom: 10px;
 }
+.label {
+   float: right;
+   color: yellowgreen;
+   text-transform: uppercase;
+}
+.hide {
+   display: none;
+}
+
+.show { 
+   display: block;
+}
 
 .list{
    max-width: 400px;

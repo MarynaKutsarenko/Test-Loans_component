@@ -8,22 +8,35 @@ import { Loan } from '../../interface/loan';
 })
   
 export class ModalComponent implements OnInit {
-  public enteredValue: string = '';
-  public inputValue: string = '';
+  public enteredValue!: number;
   public inputPlaceholder: string = 'enter invests...';
 
-  public isModalVisible: boolean = false;
-
   @Input() loan: Loan = {} as Loan;
+  @Input() amount!: number;
+
   @Output() showModal: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() showInvestMark: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() changedAmount: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
-  public handleValue(e: Event): void {
-    this.inputValue = (e.target as HTMLInputElement).value;
-  }
   
-  public handleCloseModal(e: Event): void {
-    this.isModalVisible = false;
+  private getAmountsResult(amount: number) {
+    this.loan.available = this.loan.available - amount;
+    this.loan.amount = this.loan.amount + amount;
+    this.changedAmount.emit(this.amount = (this.amount - amount));
+  }
+
+  public handleGetValue(e: Event): void {
+    this.enteredValue = +(e.target as HTMLInputElement).value;
+    this.getAmountsResult(this.enteredValue);
+  }
+
+  public handleInvested(): void {
+    this.showInvestMark.emit(this.loan.isInvested = true);
+    this.showModal.emit(true);
+  }
+    
+  public handleCloseModal(): void {
     this.showModal.emit(true);
   }
 

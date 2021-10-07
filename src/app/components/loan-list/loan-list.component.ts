@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Loan } from '../../interface/loan';
 import { loans } from '../../db/current-loans';
 
@@ -9,21 +9,29 @@ import { loans } from '../../db/current-loans';
 })
 export class LoanListComponent implements OnInit {
   public title: string = 'Current Loans';
-  public amount: number = 238.456;
+  public amount: number = 238456;
 
   public loans: Loan[] = loans;
   public loan: Loan = {} as Loan;
 
   public isModalVisible: boolean = false;
 
-  constructor() { }
+  constructor() {}
+
+  public handleChangeTotalAmount(value: number): void {
+    this.amount = value;
+  }
+
+  public handleChangeMarkdown(id: number) {
+    this.loan.isInvested = true;
+  }
 
   public handleSelectedLoan(loan: Loan): void {
     this.loan = loan;
     this.isModalVisible = true;
   }
 
-  public handleOpenModal(e: boolean): void {
+  public handleOpenModal(): void {
     this.isModalVisible = false;
   }
 

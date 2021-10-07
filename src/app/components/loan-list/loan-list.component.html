@@ -1,23 +1,29 @@
 <div class="main">
-   <h1 class="title"> {{ title }} </h1>
+  <h1 class="title"> {{ title }} </h1>
 
-   <app-loan
-      *ngFor="let loan of loans"
-      [loan]="loan"
-      (click)="handleSelectedLoan(loan)"
-   >
-   </app-loan>
+  <app-loan 
+   *ngFor="let loan of loans" 
+   [loan]="loan" 
+   (click)="handleSelectedLoan(loan)"
+  >
+  </app-loan>
 
-   <footer class="footer"> 
-      Total amount available for investmens: 
-      <span class="footer-text">£{{ amount }}</span>
-   </footer>
+  <footer class="footer">
+      Total amount available for investmens:
+      <span class="footer-text">
+         £{{ amount }}
+      </span>
+  </footer>
 
-   <app-modal 
-   *ngIf="isModalVisible"
+  <app-modal 
+   *ngIf="isModalVisible" 
    [loan]="loan"
-   (showModal)="handleOpenModal($event)" 
-   >
-   </app-modal>
+   [amount]="amount" 
+   (showModal)="handleOpenModal()"
+   (showInvestMark)="handleChangeMarkdown(loan.id)"
+   (changedAmount)='handleChangeTotalAmount($event)'
+  >
+  </app-modal>
 
 </div>
+

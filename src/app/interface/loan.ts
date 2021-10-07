@@ -6,5 +6,6 @@ export interface Loan {
    "annualised_return": number,
    "term_remaining": number,
    "ltv": number,
-   "amount": number
+   "amount": number,
+   "isInvested": boolean
 }
