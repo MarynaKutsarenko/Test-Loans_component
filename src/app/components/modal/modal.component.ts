@@ -21,9 +21,9 @@ export class ModalComponent implements OnInit {
   constructor() { }
   
   private getAmountsResult(amount: number) {
-    this.loan.available = this.loan.available - amount;
-    this.loan.amount = this.loan.amount + amount;
-    this.changedAmount.emit(this.amount = (this.amount - amount));
+    this.loan.available = this.loan.available - amount <= 0 ? 0 : this.loan.available - amount;
+    this.loan.amount = this.loan.amount + amount <= 0 ? 0 : this.loan.amount + amount;
+    this.changedAmount.emit(this.amount = (this.amount - amount) <= 0 ? 0 : this.amount);
   }
 
   public handleGetValue(e: Event): void {
