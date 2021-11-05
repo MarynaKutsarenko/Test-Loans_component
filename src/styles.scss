@@ -12,7 +12,7 @@ body {
   padding: 0 2em;
 }
 
-.btn {
+.invest-btn {
   text-transform: uppercase;
   padding: 10px 5px;
   background: yellow;
@@ -21,4 +21,20 @@ body {
   width: 100px;
   align-self: end;
   display: inline;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+
+  &:hover{
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, .5);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
 }
+

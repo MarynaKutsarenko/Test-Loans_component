@@ -1,12 +1,13 @@
 <div class="container" >
 
    <h3 class="title">{{ loan.title }}
-      <span class="label {{ (loan.isInvested) ? 'show' : 'hide' }}">
+      <span class="label"
+      [ngClass] = "loan.isInvested ? 'show' : 'hide'"
+      >
          Invested
       </span>
    </h3>
    
-
    <ul class="list">
       <li class="list-item">
          tranche: {{ loan.tranche }} , 
@@ -20,7 +21,7 @@
    </ul>
 
    <button 
-      class="btn"
+      class="invest-btn"
       (click)="handleSelectedLoan()"
    >
       Invest

@@ -9,7 +9,6 @@ import { Loan } from '../../interface/loan';
   
 export class ModalComponent implements OnInit {
   public enteredValue!: number;
-  public inputPlaceholder: string = 'enter invests...';
 
   @Input() loan: Loan = {} as Loan;
   @Input() amount!: number;

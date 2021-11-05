@@ -24,12 +24,12 @@
 
   <input class="modal-input" 
     type="text"
-    [placeholder]="inputPlaceholder"
+    placeholder="enter invests..."
     [(ngModel)]="enteredValue " 
     (input)="handleGetValue($event)"
   />
 
-  <button class="btn"
+  <button class="invest-btn"
     (click)="handleInvested()"
   >
     Invest

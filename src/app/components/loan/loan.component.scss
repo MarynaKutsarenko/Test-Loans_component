@@ -7,33 +7,38 @@
    background: #fff;
    max-width: 800px;
    justify-content: center;
+
+   .title {
+      margin-bottom: 10px;
+
+      .label {
+         float: right;
+         color: yellowgreen;
+         text-transform: uppercase;
+      }
+
+      .hide {
+         display: none;
+      }
+      
+      .show { 
+         display: block;
+      }
+   }
+   
+   .list{
+      max-width: 400px;
+   }
+   
+   .list-item{
+      display: inline-block;
+   }
+   
+   .list-item:not(:last-child) {
+      margin-bottom: 10px;
+   }
+
 }
 
-.title {
-   margin-bottom: 10px;
-}
-.label {
-   float: right;
-   color: yellowgreen;
-   text-transform: uppercase;
-}
-.hide {
-   display: none;
-}
 
-.show { 
-   display: block;
-}
-
-.list{
-   max-width: 400px;
-}
-
-.list-item{
-   display: inline-block;
-}
-
-.list-item:not(:last-child) {
-   margin-bottom: 10px;
-}
 

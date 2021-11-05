@@ -8,7 +8,6 @@ import { loans } from '../../db/current-loans';
   styleUrls: ['./loan-list.component.scss']
 })
 export class LoanListComponent implements OnInit {
-  public title: string = 'Current Loans';
   public amount: number = 238456;
 
   public loans: Loan[] = loans;
